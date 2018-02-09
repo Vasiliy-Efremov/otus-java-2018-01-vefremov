@@ -5,13 +5,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+
 import com.google.common.collect.ImmutableList;
 
-public class l011 {
-   private static int theNumber;
-   private static List<Integer> list = new ArrayList<>();
+public class Main {
 
     public static void main(String[] args) throws IOException {
+        int theNumber;
         System.out.print("Enter a number: ");
         theNumber = getInt();
         int calculation = calculatingTriangleNumber(theNumber);
@@ -21,11 +21,11 @@ public class l011 {
         System.out.println("Triangle number = " + immutableList.get(0));
     }
 
-    public static int calculatingTriangleNumber (int n) {
+    public static int calculatingTriangleNumber(int n) {
+        List<Integer> list = new ArrayList<>();
         if (n == 1) {
             return 1;
-        }
-        else {
+        } else {
             list.add(n);
             return (n + calculatingTriangleNumber(n - 1));
         }
@@ -34,7 +34,7 @@ public class l011 {
     public static int getInt() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int i = Integer.parseInt(reader.readLine());
-        return  i;
+        return i;
     }
 
     public static List<Integer> transformToImmutable(List<Integer> list) {
