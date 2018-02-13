@@ -12,15 +12,22 @@ public class Utils {
         return runtime.totalMemory() - runtime.freeMemory();
     }
 
+    public static long multiplicityByEight(long value) {
+        while (value % 8 != 0) {
+            value++;
+        }
+        return value;
+    }
+
     public static long calculateEmptyStringSize() throws InterruptedException {
         int size = 20_000_000;
         String[] array = new String[size];
         long memoryBefore = getMemory();
         for (int i = 0; i < size; i++) {
-            array[i] = new String();
+            array[i] = new String(new char[0]);
         }
         long memoryAfter = getMemory();
-        return (memoryAfter - memoryBefore) / size;
+        return multiplicityByEight((memoryAfter - memoryBefore) / size);
     }
 
     public static long calculateObjectSize() throws InterruptedException {
@@ -31,7 +38,7 @@ public class Utils {
             array[i] = new Object();
         }
         long memoryAfter = getMemory();
-        return (memoryAfter - memoryBefore) / size;
+        return multiplicityByEight((memoryAfter - memoryBefore) / size);
     }
 
     public static long calculateEmptyContainersSize() throws InterruptedException {
@@ -42,7 +49,7 @@ public class Utils {
             array[i] = new ArrayList();
         }
         long memoryAfter = getMemory();
-        return (memoryAfter - memoryBefore) / size;
+        return multiplicityByEight((memoryAfter - memoryBefore) / size);
     }
 
     public static long calculateTheGrowthOfTheContainerSize(int size) throws InterruptedException {
@@ -56,6 +63,6 @@ public class Utils {
             list.add(value++);
         }
         long memoryAfter = getMemory();
-        return memoryAfter - memoryBefore;
+        return multiplicityByEight(memoryAfter - memoryBefore);
     }
 }
