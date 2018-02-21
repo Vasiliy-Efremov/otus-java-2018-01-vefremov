@@ -16,7 +16,6 @@ public class MyArrayList<T> implements List<T> {
 
     public MyArrayList(int size) {
         this.content = new Object[size];
-        this.size = size;
     }
 
     public int size() {
@@ -157,7 +156,7 @@ public class MyArrayList<T> implements List<T> {
     }
 
     public Iterator<T> iterator() {
-        throw new NotImplementedException();
+        return listIterator();
     }
 
     public boolean contains(Object o) {
