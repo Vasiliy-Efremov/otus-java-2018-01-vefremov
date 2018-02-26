@@ -1,0 +1,18 @@
+The name of using GC in application: Copy
+The name of using GC in application: MarkSweepCompact
+------------------------------------------------------------
+Count of minor garbage collections: 2. Total duration: 106
+Count of major garbage collections: 0. Total duration: 0
+------------------------------------------------------------
+Count of minor garbage collections: 4. Total duration: 202
+Count of major garbage collections: 0. Total duration: 0
+------------------------------------------------------------
+Count of minor garbage collections: 5. Total duration: 260
+Count of major garbage collections: 0. Total duration: 0
+------------------------------------------------------------
+Count of minor garbage collections: 7. Total duration: 335
+Count of major garbage collections: 1. Total duration: 420
+------------------------------------------------------------
+Count of minor garbage collections: 8. Total duration: 335
+Count of major garbage collections: 5. Total duration: 1665
+------------------------------------------------------------

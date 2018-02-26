@@ -1,0 +1,18 @@
+The name of using GC in application: ParNew
+The name of using GC in application: ConcurrentMarkSweep
+------------------------------------------------------------
+Count of minor garbage collections: 2. Total duration: 260
+Count of major garbage collections: 0. Total duration: 0
+------------------------------------------------------------
+Count of minor garbage collections: 4. Total duration: 446
+Count of major garbage collections: 0. Total duration: 0
+------------------------------------------------------------
+Count of minor garbage collections: 5. Total duration: 509
+Count of major garbage collections: 2. Total duration: 10631
+------------------------------------------------------------
+Count of minor garbage collections: 7. Total duration: 691
+Count of major garbage collections: 20. Total duration: 34744
+------------------------------------------------------------
+Count of minor garbage collections: 10. Total duration: 691
+Count of major garbage collections: 48. Total duration: 43411
+------------------------------------------------------------

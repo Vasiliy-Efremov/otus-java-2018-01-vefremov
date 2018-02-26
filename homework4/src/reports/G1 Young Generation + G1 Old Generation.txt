@@ -1,0 +1,18 @@
+The name of using GC in application: G1 Young Generation
+The name of using GC in application: G1 Old Generation
+------------------------------------------------------------
+Count of minor garbage collections: 5. Total duration: 121
+Count of major garbage collections: 0. Total duration: 0
+------------------------------------------------------------
+Count of minor garbage collections: 8. Total duration: 282
+Count of major garbage collections: 0. Total duration: 0
+------------------------------------------------------------
+Count of minor garbage collections: 10. Total duration: 345
+Count of major garbage collections: 0. Total duration: 0
+------------------------------------------------------------
+Count of minor garbage collections: 16. Total duration: 511
+Count of major garbage collections: 0. Total duration: 0
+------------------------------------------------------------
+Count of minor garbage collections: 25. Total duration: 669
+Count of major garbage collections: 1. Total duration: 603
+------------------------------------------------------------
