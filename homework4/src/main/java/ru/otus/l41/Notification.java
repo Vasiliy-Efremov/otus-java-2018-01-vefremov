@@ -16,7 +16,8 @@ public class Notification implements NotificationListener {
 
     @Override
     public void handleNotification(javax.management.Notification notification, Object handback) {
-        GarbageCollectionNotificationInfo gcni = GarbageCollectionNotificationInfo.from((CompositeData) notification.getUserData());
+        GarbageCollectionNotificationInfo gcni =
+                GarbageCollectionNotificationInfo.from((CompositeData) notification.getUserData());
 
         if (gcni.getGcAction().equals("end of minor GC")) {
             countMinorCleanUp++;
