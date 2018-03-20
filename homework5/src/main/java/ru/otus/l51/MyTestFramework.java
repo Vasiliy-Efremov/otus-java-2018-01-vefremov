@@ -14,7 +14,7 @@ public class MyTestFramework {
 
     public static void run(Class<?> input) throws Exception {
         if (input != null) {
-            List<Method> listWithTestAnnotation = new ArrayList();
+            List<Method> listWithTestAnnotation = new ArrayList<>();
             Method methodWithAfter = null;
             Method methodWithBefore = null;
             int countMethodsWithAfterAnnotation = 0;
