@@ -1,15 +1,21 @@
 package ru.otus.l61;
 
+import static ru.otus.l61.NominalValues.*;
+
+
 public class Main {
     public static void main(String[] args) {
         ATM atm = new ATM();
-
-        atm.deposit(200, 100, 100, 150);
         atm.getBalance();
-        atm.printRemainingBanknotes();
 
-        atm.withdraw(13);
-        atm.getBalance();
+        atm.deposit(ONE, 200);
+        atm.deposit(THREE, 200);
+        atm.deposit(FIVE, 200);
+        atm.deposit(TEN, 200);
         atm.printRemainingBanknotes();
+        atm.getBalance();
+
+        atm.withdraw(114);
+        atm.getBalance();
     }
 }
