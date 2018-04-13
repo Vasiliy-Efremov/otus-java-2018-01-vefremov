@@ -9,48 +9,44 @@ public class TestJsonParser {
 
     @Test
     public void testString() throws IllegalAccessException {
-        JsonConverter.setObject("abc");
-        JsonConverter.setArrayWithInts(null);
+        String myParse = JsonConverter.convertToJson("abc");
         String jsonStringFromGSON = gson.toJson("abc");
-        String myParse = JsonConverter.convertToJson();
         Assert.assertEquals(jsonStringFromGSON, myParse);
     }
 
     @Test
     public void testInteger() throws IllegalAccessException {
-        JsonConverter.setObject(123);
-        JsonConverter.setArrayWithInts(null);
-        String myParse = JsonConverter.convertToJson();
+        String myParse = JsonConverter.convertToJson(123);
         String jsonStringFromGSON = gson.toJson(123);
         Assert.assertEquals(jsonStringFromGSON, myParse);
     }
 
     @Test
     public void testBoolean() throws IllegalAccessException {
-        JsonConverter.setObject(true);
-        JsonConverter.setArrayWithInts(null);
         String jsonStringFromGSON = gson.toJson(true);
-        String myParse = JsonConverter.convertToJson();
+        String myParse = JsonConverter.convertToJson(true);
         Assert.assertEquals(jsonStringFromGSON, myParse);
     }
 
     @Test
-    public void testArray() throws IllegalAccessException {
-        JsonConverter.setArrayWithInts(new int[]{1, 2, 3});
-        JsonConverter.setObject(null);
-        String myParse = JsonConverter.convertToJson();
+    public void testArrayWithInt() throws IllegalAccessException {
+        String myParse = JsonConverter.convertToJson(new int[]{1, 2, 3});
         String jsonStringFromGSON = gson.toJson(new int[]{1, 2, 3});
+        Assert.assertEquals(jsonStringFromGSON, myParse);
+    }
+
+    @Test
+    public void testArrayWithStrings() throws IllegalAccessException {
+        String myParse = JsonConverter.convertToJson(new String[]{"1", "2", "3"});
+        String jsonStringFromGSON = gson.toJson(new String[]{"1", "2", "3"});
         Assert.assertEquals(jsonStringFromGSON, myParse);
     }
 
     @Test
     public void testLabRat() throws IllegalAccessException {
         LabRat labRat = new LabRat();
-        JsonConverter.setObject(labRat);
-        JsonConverter.setArrayWithInts(null);
         String jsonStringFromGSON = gson.toJson(labRat);
-        String myParse = JsonConverter.convertToJson();
-
+        String myParse = JsonConverter.convertToJson(labRat);
         LabRat labRat1 = gson.fromJson(myParse, LabRat.class);
         LabRat labRat2 = gson.fromJson(jsonStringFromGSON, LabRat.class);
         Assert.assertEquals(labRat1, labRat2);
@@ -58,9 +54,7 @@ public class TestJsonParser {
 
     @Test
     public void nullTest() throws IllegalAccessException {
-        JsonConverter.setObject(null);
-        JsonConverter.setArrayWithInts(null);
-        String myParse = JsonConverter.convertToJson();
+        String myParse = JsonConverter.convertToJson(null);
         boolean result = myParse == null;
         Assert.assertEquals(false, result);
     }
