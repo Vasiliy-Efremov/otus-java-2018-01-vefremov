@@ -30,6 +30,6 @@ public class LabRat {
         return false;
     }
 
-   //public class A { int i = 1; }
-   //public class B { A a = new A(); }
+   public class A { int i = 1; }
+   public class B { A a = new A(); }
 }
