@@ -22,12 +22,10 @@ public class AuthenticationServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response) throws ServletException, IOException {
-        if (true) {
-            response.setContentType("text/html;charset=utf-8");
-            String page = templateProcessor.getPage(LOGIN_PAGE_TEMPLATE, null);
-            response.getWriter().println(page);
-            response.setStatus(HttpServletResponse.SC_OK);
-        }
+        response.setContentType("text/html;charset=utf-8");
+        String page = templateProcessor.getPage(LOGIN_PAGE_TEMPLATE, null);
+        response.getWriter().println(page);
+        response.setStatus(HttpServletResponse.SC_OK);
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
