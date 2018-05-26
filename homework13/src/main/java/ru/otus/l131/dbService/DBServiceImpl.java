@@ -81,11 +81,6 @@ public class DBServiceImpl implements DBService {
     }
 
     @Override
-    public void shutdown() {
-        sessionFactory.close();
-    }
-
-    @Override
     public CacheEngine<Long, DataSet> getCache() {
         return cache;
     }
